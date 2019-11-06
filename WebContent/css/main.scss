@@ -1,0 +1,90 @@
+
+//페이지 업 버튼
+.pageUP {
+    scroll-behavior: smooth;
+    margin-top: 450px;
+    margin-left: 90%;
+    position: fixed;
+}
+//홈페이지 타이틀 로고 설정
+.jbTitle {
+    display: flex;
+    padding: 0; margin: 0;
+    height: 120px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(240,240,240);
+    p {
+        padding: 0; margin: 0;
+        }
+}
+//메뉴바 설정
+.jbMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    background-color: deepskyblue;
+    padding: 0;
+    margin:0;
+    width: 100%; height: 60px;
+    text-align: center;
+    font-size:22px;
+        ul {
+            padding: 0;
+            margin: 5px;
+            li { 
+                float: left;
+                list-style-type: none;
+                a{
+                    text-decoration: none; 
+                    padding: 0;
+                    cursor: pointer;
+                }
+                a:link{
+                    text-decoration: none;
+                    color: black;
+                }
+                a:visited{
+                    text-decoration: none;
+                    color: black;
+                }
+                a:active{
+                    text-decoration: none;
+                    color: black;
+                }
+                a:hover {
+                    color: lightgray;
+                }
+            }
+        } 
+    }
+//메뉴바가 상단에 고정되었을때 설정
+.jbFixed {
+    position: fixed;
+    top: 0px;
+    margin:0; padding:0;
+}
+//섹션영역 설정    
+section{
+    text-align: center;
+}
+//footer 영역 설정
+footer{
+    background-color: dodgerblue;
+    font-size: 15px;
+    text-align: center;
+}
+//시계 설정
+.Clock {
+    width: 150px;
+    height: 30px;
+    box-sizing: border-box;
+    font-size: 25px;
+    color: white;
+    background-color: none;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    margin-left: 4px;
+    float: left;
+}

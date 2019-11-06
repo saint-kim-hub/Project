@@ -1,0 +1,106 @@
+//이 파일은 새글쓰기 팝업창에 관한 css 설정을 다룹니다.
+//팝업시 배경색 변경
+#popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    margin-top: -60px;
+}
+//팝업창
+#popmenu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 550px;
+    height: 450px;
+    text-align: center;
+    background: #fff;
+    margin-top: -50px;
+    border-radius: 3%;
+    font-size: 30px;
+    color: darkgray;
+}
+#popmenu p{
+    margin-top: 30px;
+}
+//저장 버튼
+.add{
+    position: absolute;
+    left: 40%;
+    bottom: 10px;
+    transform: translate(-50%,0);
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: skyblue;
+    cursor: pointer;
+    font-size: 25px;
+    color: black;
+    border: 3px outset skyblue;
+}
+.add:hover{
+    color: white;
+}
+//닫기 버튼
+.exit{
+    position: absolute;
+    left: 60%;
+    bottom: 10px;
+    transform: translate(-50%,0);
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #007AAE;
+    cursor: pointer;
+    font-size: 25px;
+    color: black;
+    border: 3px outset #007AAE;
+}
+.exit:hover{
+    color: white;
+}
+//새글쓰기 버튼
+#contents {
+    text-align: center;
+    float: left;
+}
+//새글쓰기 팝업창의 타이틀라벨
+.join_row label{
+    display: block; margin: 19px 0 8px;
+    font-size: 25px; font-weight: bold;
+    color: black;   
+}
+//새글쓰기 팝업창의 텍스트에어리어
+textarea{
+    width: 520px;
+    padding: 5px;
+    margin-left: 10px;
+    border: 3px soild #ccc;
+    border-radius: 4%;
+    resize: vertical;
+    font-size: 22px;
+    font-family: 'Jua', sans-serif;
+    resize: none;
+}
+.int{
+    width: 75%;
+    margin-top: 6px;
+}
+//글자수 카운터
+#counter {
+  background: white;
+  border: 2px solid lightgray;
+  border-radius: 0.5em;
+  width: 40px; height: 10px;
+  text-align: right;
+  padding: 5px;
+  font-size: 10px;
+  margin-left: 250px;
+  margin-top: 3px;
+  position: absolute;
+}

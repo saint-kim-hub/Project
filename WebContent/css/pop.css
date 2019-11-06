@@ -1,0 +1,115 @@
+#popup {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: -60px;
+}
+
+#popmenu {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 550px;
+  height: 450px;
+  text-align: center;
+  background: #fff;
+  margin-top: -50px;
+  border-radius: 3%;
+  font-size: 30px;
+  color: darkgray;
+}
+
+#popmenu p {
+  margin-top: 30px;
+}
+
+.add {
+  position: absolute;
+  left: 40%;
+  bottom: 10px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: skyblue;
+  cursor: pointer;
+  font-size: 25px;
+  color: black;
+  border: 3px outset skyblue;
+}
+
+.add:hover {
+  color: white;
+}
+
+.exit {
+  position: absolute;
+  left: 60%;
+  bottom: 10px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #007AAE;
+  cursor: pointer;
+  font-size: 25px;
+  color: black;
+  border: 3px outset #007AAE;
+}
+
+.exit:hover {
+  color: white;
+}
+
+#contents {
+  text-align: center;
+  float: left;
+}
+
+.join_row label {
+  display: block;
+  margin: 19px 0 8px;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+
+textarea {
+  width: 520px;
+  padding: 5px;
+  margin-left: 10px;
+  border: 3px soild #ccc;
+  border-radius: 4%;
+  resize: vertical;
+  font-size: 22px;
+  font-family: 'Jua', sans-serif;
+  resize: none;
+}
+
+.int {
+  width: 75%;
+  margin-top: 6px;
+}
+
+#counter {
+  background: white;
+  border: 2px solid lightgray;
+  border-radius: 0.5em;
+  width: 40px;
+  height: 10px;
+  text-align: right;
+  padding: 5px;
+  font-size: 10px;
+  margin-left: 250px;
+  margin-top: 3px;
+  position: absolute;
+}
+/*# sourceMappingURL=pop.css.map */
