@@ -104,8 +104,7 @@
     </div>
     <!--section 영역-->
     <section>
-        <div><img src="./common/img/T01.png"></div>
-        <div><img src="./common/img/T02.png"></div>
+    	<jsp:include page="view.jsp"/>
     </section>
     <!--footer 영역-->
     <footer>
