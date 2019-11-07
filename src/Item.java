@@ -1,7 +1,7 @@
 public class Item {
-	private String key;
-	private int length;
-	private String text;
+	private String key; // 시리얼넘버
+	private int length; // text 저장 길이
+	private String text; // text
 	
 	public String getKey() {
 		return key;
@@ -22,16 +22,16 @@ public class Item {
 		this.text = text;
 	}
 	
-	public String raw() {
+	public String raw() { // length만큼 공간 할당
 	    StringBuffer padded = new StringBuffer(this.text);
-	    while (padded.toString().getBytes().length < this.length) {
-	        padded.append(' ');
+	    while (padded.toString().getBytes().length < this.length) { 
+	        padded.append(' '); // 빈 공간을 " "으로 채움
 	    }
 	    
-	    return padded.toString();
+	    return padded.toString(); // 채워진 문자열 반환
 	}
 
-	public static Item create(String key, int length, String text) {
+	public static Item create(String key, int length, String text) { // 항목 생성 
 		Item item = new Item();
 		item.setKey(key);
 		item.setLength(length);
