@@ -84,7 +84,7 @@
     <!--새글쓰기 팝업창-->
     <div id="popup">
         <div id="popmenu">
-            <form action="Packet" method="POST">
+            <form action="Packet">
 	            <div class="join_row">
 	                <label for="yy_id">메모글쓰기</label>
 	                <div class="int">

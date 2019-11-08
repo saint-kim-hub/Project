@@ -36,8 +36,8 @@ public class Packet extends HttpServlet {
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Packet packet = new Packet();
-		packet.addItem(Item.create("key", 6, Format.time())); // 키 값 6자리
-		packet.addItem(Item.create("text", 300, request.getParameter("Txt"))); // 나머지 문자열
+//		packet.addItem(Item.create("key", 6, Format.time())); // 키 값 6자리
+		packet.addItem(Item.create("text", 1000, request.getParameter("Txt"))); // 나머지 문자열
 		
 		try {
 			Write.writeFile(packet); // 파일에 저장하기 위해 Write.java파일로 패킷 전송
