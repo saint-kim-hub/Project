@@ -7,6 +7,7 @@
     <title>단문 메모장</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/pop.css">
+    <link rel="stylesheet" href="./css/page.css">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -32,8 +33,11 @@
                 float:left;
                 width: 420px;
             }
-            section div{
-                width: 420px;
+            .page{
+               width: 420px;
+            }
+            .page li{
+                margin-left: 16px;
             }
             .pageUP{
                 margin-left: 350px;
@@ -85,7 +89,7 @@
             <div class="join_row">
                 <label for="yy_id">메모글쓰기</label>
                 <div class="int">
-                    <textarea id="Txt" name="Txt" placeholder="메모를 입력하세요." maxlength="299" cols="20" rows="10"></textarea>
+                    <textarea id="Txt" name="Txt" placeholder="메모를 입력하세요." maxlength="299" cols="20" rows="10" wrap="hard"></textarea>
                     <span id="counter">###</span>
                 </div>
                 </label>
@@ -99,9 +103,29 @@
       <a href="#"><img src="./common/img/PU.png"></a>
     </div>
     <!--section 영역-->
-    <section>
-        <div><img src="./common/img/T01.png"></div>
-        <div><img src="./common/img/T02.png"></div>
+    <section style="text-align: center;">
+        <ul class="page">
+            <div class="range"></div>
+            <li>
+                <div class="dot">
+                    <a onclick=""></a></div>    
+            </li>
+            <div class="range"></div>
+            <li>
+                <div class="dot">
+                    <a onclick=""></a></div>  
+            </li>
+            <div class="range"></div>
+            <li>
+                <div class="dot">
+                    <a onclick=""></a></div>  
+            </li>
+            <div class="range"></div>
+            <li>
+                <div class="dot">
+                    <a onclick=""></a></div>  
+            </li>
+        </ul>
     </section>
     <!--footer 영역-->
     <footer>
