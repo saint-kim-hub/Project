@@ -28,17 +28,19 @@
 }
 //저장 버튼
 .add{
+    padding: 0; margin: 0;
     position: absolute;
     left: 40%;
     bottom: 10px;
     transform: translate(-50%,0);
-    width: 60px;
-    height: 30px;
+    width: 66px;
+    height: 36px;
     text-align: center;
     line-height: 30px;
     background: skyblue;
     cursor: pointer;
     font-size: 25px;
+    font-family: 'Jua', sans-serif;
     color: black;
     border: 3px outset skyblue;
 }
