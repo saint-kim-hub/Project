@@ -27,13 +27,15 @@ body {
   border-radius: 3%;
   background-color: white;
   padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 .page li .space {
   padding: 3px;
   width: 345px;
   height: 29px;
-  border: 3px solid lightgray;
+  border-bottom: 3px solid lightgray;
   float: left;
 }
 
@@ -46,8 +48,18 @@ body {
   margin-right: 4px;
   margin-top: 5px;
   margin-left: 10px;
-  margin-bottom: 9px;
+  margin-bottom: 6px;
   cursor: pointer;
   background-image: url("../common/img/dot.png");
+}
+
+.page li .textbox {
+  padding: 10px;
+  width: 355px;
+  height: 330px;
+  margin-top: 5px;
+  border: 3px solid lightgray;
+  border-radius: 5%;
+  float: left;
 }
 /*# sourceMappingURL=page.css.map */
