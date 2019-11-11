@@ -5,7 +5,7 @@
 <%@ page import="java.util.TreeMap, java.util.List, java.util.Collections" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
-	TreeMap<String, List> map = new TreeMap<>(Collections.reverseOrder());
+	TreeMap<String, String> map = new TreeMap<>(Collections.reverseOrder());
 	
 	File dir = new File("/opt/tomcat/2019");
 	File[] fileList = dir.listFiles();
@@ -14,10 +14,11 @@
 		for (int i = 0; i < fileList.length; i++) {
 			File file = fileList[i];
 			if (file.isFile()) {
-				Path path = Paths.get("/opt/tomcat/2019", file.getName());
+				String name = file.getName();
+				Path path = Paths.get("/opt/tomcat/2019", name);
 				Charset charset = Charset.forName("UTF-8");
 				List<String> fileContents = Files.readAllLines(path, charset);
-				map.put(file.getName(), fileContents);
+				map.put(name.substring(0, name.length() - 4), String.join("", fileContents));
 			}
 		}
 	} catch (Exception e) {
@@ -28,6 +29,7 @@
 	<div class="range"></div>
 	<li>
 		<div class="space">${map.key}</div>
-		<div class="dot"><a onclick=""></a></div>${map.value}
+		<div class="dot"><a onclick=""></a></div>
+		<div class="textbox">${map.value}</div>
 	</li>
 </c:forEach>
