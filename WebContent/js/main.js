@@ -23,7 +23,6 @@ $(document).ready(function(){
 $(function() {
       $('#Txt').keyup(function (e){
           var Txt = $(this).val();
-          $(this).height(((Txt.split('\n').length + 1) * 6) + 'em');
           $('#counter').html(Txt.length + '/300');
       });
       $('#Txt').keyup();

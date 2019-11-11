@@ -9,6 +9,7 @@
     <title>단문 메모장</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/pop.css">
+    <link rel="stylesheet" href="./css/page.css">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -34,8 +35,11 @@
                 float:left;
                 width: 420px;
             }
-            section div{
-                width: 420px;
+            .page{
+               width: 420px;
+            }
+            .page li{
+                margin-left: 16px;
             }
             .pageUP{
                 margin-left: 350px;
@@ -103,8 +107,10 @@
       <a href="#"><img src="./common/img/PU.png"></a>
     </div>
     <!--section 영역-->
-    <section>
-    	<jsp:include page="view.jsp"/>
+    <section style="text-align: center;">
+        <ul class="page">
+			<jsp:include page="view.jsp"/>
+        </ul>
     </section>
     <!--footer 영역-->
     <footer>

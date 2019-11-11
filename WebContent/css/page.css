@@ -1,0 +1,53 @@
+body {
+  text-align: center;
+}
+
+.page {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: 400px;
+  height: 100%;
+  background-color: none;
+  margin-left: -10px;
+}
+
+.page .range {
+  background-color: none;
+  width: 10px;
+  height: 100px;
+}
+
+.page li {
+  margin: 0;
+  list-style-type: none;
+  width: 380px;
+  height: 400px;
+  border: 3px solid lightgray;
+  border-radius: 3%;
+  background-color: white;
+  padding: 10px;
+}
+
+.page li .space {
+  padding: 3px;
+  width: 345px;
+  height: 29px;
+  border: 3px solid lightgray;
+  float: left;
+}
+
+.page li .dot {
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 9px;
+  height: 27px;
+  margin-right: 4px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 9px;
+  cursor: pointer;
+  background-image: url("../common/img/dot.png");
+}
+/*# sourceMappingURL=page.css.map */

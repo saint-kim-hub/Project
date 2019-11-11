@@ -2,25 +2,32 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.io.File, java.nio.file.Files, java.nio.file.Paths" %>
 <%@ page import="java.nio.charset.Charset, java.nio.file.Path" %>
-<%@ page import="java.util.List" %>
+<%@ page import="java.util.TreeMap, java.util.List, java.util.Collections" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
-	File dir = new File("/opt/tomcat/2019"); // 폴더 경로
-	//File dir = new File("d://2019"); // 폴더 경로	
+	TreeMap<String, List> map = new TreeMap<>(Collections.reverseOrder());
+	
+	File dir = new File("/opt/tomcat/2019");
 	File[] fileList = dir.listFiles();
+	
 	try {
-		for (int i = 0; i < fileList.length; i++) { // 폴더 내에 있는 파일 찾기
+		for (int i = 0; i < fileList.length; i++) {
 			File file = fileList[i];
-			if (file.isFile()) { // 파일일 경우
-				Path path = Paths.get("/opt/tomcat/2019", file.getName()); // 폴더 경로 + 파일
-				//Path path = Paths.get("d://2019", file.getName()); // 폴더 경로 + 파일
-				Charset charset = Charset.forName("UTF-8"); // 인코딩 방식
-				List<String> fileContents = Files.readAllLines(path, charset); // 파일 내용
-				for (String temp:fileContents) { // 찾은 파일 안에 있는 내용 출력
-					out.println(temp + "<br>"); // 출력
-				}
+			if (file.isFile()) {
+				Path path = Paths.get("/opt/tomcat/2019", file.getName());
+				Charset charset = Charset.forName("UTF-8");
+				List<String> fileContents = Files.readAllLines(path, charset);
+				map.put(file.getName(), fileContents);
 			}
 		}
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
 %>
+<c:forEach var="map" items="<%=map%>">
+	<div class="range"></div>
+	<li>
+		<div class="space">${map.key}</div>
+		<div class="dot"><a onclick=""></a></div>${map.value}
+	</li>
+</c:forEach>
