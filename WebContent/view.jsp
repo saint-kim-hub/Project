@@ -15,7 +15,7 @@
 			File file = fileList[i];
 			if (file.isFile()) {
 				String name = file.getName();
-				Path path = Paths.get("/opt/tomcat/2019", name);
+				Path path = Paths.get(dir.getPath(), name);
 				Charset charset = Charset.forName("UTF-8");
 				List<String> fileContents = Files.readAllLines(path, charset);
 				map.put(name.substring(0, name.length() - 4), String.join("", fileContents));
@@ -29,7 +29,11 @@
 	<div class="range"></div>
 	<li>
 		<div class="space">${map.key}</div>
-		<div class="dot"><a onclick=""></a></div>
+		<div class="dot">
+			<form action="com.project.controller.Controller">
+				<button type="submit" name="del" value="${map.key}">삭제</button>
+			</form>
+		</div>
 		<div class="textbox">${map.value}</div>
 	</li>
 </c:forEach>

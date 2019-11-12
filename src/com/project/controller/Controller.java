@@ -1,6 +1,8 @@
 package com.project.controller;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -54,6 +56,10 @@ public class Controller extends HttpServlet {
 	    	}
 	    	
 	    	response.sendRedirect("/Project/");
+		} else if (request.getParameter("del") != null) {
+			Path path = Paths.get("/opt/tomcat/2019/", request.getParameter("del") + ".txt");
+			Delete.delete(path);
+			response.sendRedirect("/Project/");
 		}
 		
 		requestPro(request, response);
